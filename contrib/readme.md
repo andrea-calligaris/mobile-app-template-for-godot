@@ -29,11 +29,7 @@ This will allow e.g. to do static typing of classes without getting those annoyi
 * Use comments only to make sequential code clearer or to separate it into sections; don't comment obvious stuff. If you need to explain verbosely some concept just write documentation for the developers in a separate *.md* file.
 If there are way too many comments just extract into private functions.
 
-* For functions and methods use maximum three arguments, preferably two. Never pass booleans unless for things like:
-
-`set_enabled(true)`
-
-because you never know what they stand for and so they make reading the code more annoying.
+* For functions and methods use maximum three arguments, preferably two. Never pass booleans unless for things like `set_enabled(true)` because you never know what they stand for and so they make reading the code more annoying.
 
 ### Filenames
 
