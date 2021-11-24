@@ -80,6 +80,7 @@ func print_stuff(n_times: int, message: String, on_screen:=true) -> bool:
 			#	everything clearer
 	return true
 
+
 func is_cool_dude(name: String) -> bool:
 	if name == "Bob":
 		return true
