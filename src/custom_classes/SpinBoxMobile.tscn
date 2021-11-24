@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://themes/theme_spinboxes.tres" type="Theme" id=1]
+[ext_resource path="res://custom_classes/spinbox_mobile.gd" type="Script" id=2]
+
+[node name="SpinBoxMobile" type="HBoxContainer"]
+margin_right = 158.0
+margin_bottom = 41.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Decrease" type="Button" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+text = " - "
+
+[node name="le_Value" type="LineEdit" parent="."]
+margin_left = 84.0
+margin_right = 180.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+theme = ExtResource( 1 )
+text = "---"
+align = 2
+max_length = 3
+selecting_enabled = false
+
+[node name="btn_Increase" type="Button" parent="."]
+margin_left = 184.0
+margin_right = 264.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+text = " + "
+
+[connection signal="pressed" from="btn_Decrease" to="." method="_on_btn_Decrease_pressed"]
+[connection signal="focus_exited" from="le_Value" to="." method="_on_le_Value_focus_exited"]
+[connection signal="text_entered" from="le_Value" to="." method="_on_le_Value_text_entered"]
+[connection signal="pressed" from="btn_Increase" to="." method="_on_btn_Increase_pressed"]
