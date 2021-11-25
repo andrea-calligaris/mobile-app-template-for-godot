@@ -14,7 +14,7 @@ A template to start creating mobile apps (not games) with [Godot](https://godote
 * App state (previous page, page parenting, etc.).
 * Scrolling up and down.
 * Sorting items.
-* Gray theme adapted for mobile covering most of the _Control_s.
+* Gray theme adapted for mobile covering most of the _Controls_.
 * Customized _SpinBox_ with bigger buttons.
 * Customized _Control_ _RichTextButton_ to have buttons with wrappable and multi-colored text.
 * Utility functions in [_app_manager.gd_](src/scripts/app_manager.gd).
