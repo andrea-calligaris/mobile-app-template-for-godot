@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://pages/settings.gd" type="Script" id=1]
+[ext_resource path="res://pages/settings_page.gd" type="Script" id=1]
 [ext_resource path="res://fonts/font_default_bold.tres" type="DynamicFont" id=2]
 [ext_resource path="res://custom_classes/SpinBoxMobile.tscn" type="PackedScene" id=3]
 
