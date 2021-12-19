@@ -14,9 +14,9 @@ extends ScrollContainer
 
 const SCROLL_SPEED = 4
 
-var is_dragging = false
-var _scrolling_up = false
-var _scrolling_down = false
+var is_dragging := false
+var _scrolling_up := false
+var _scrolling_down := false
 var _last_scroll_vertical := 0
 
 
