@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://pages/child_page.gd" type="Script" id=1]
 [ext_resource path="res://fonts/font_default_bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/scrollboxcontainer_supporting_mobile_drag_and_drop_and_scrolling.gd" type="Script" id=3]
 
 [node name="ChildPage" type="PanelContainer"]
 anchor_right = 1.0
@@ -25,27 +26,41 @@ custom_fonts/font = ExtResource( 2 )
 text = "Child of another page"
 align = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 margin_top = 51.0
 margin_right = 476.0
-margin_bottom = 134.0
-text = "Nothing to see here.
-You can go back though."
+margin_bottom = 849.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 142.0
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
 margin_right = 476.0
-margin_bottom = 190.0
+margin_bottom = 798.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="lbl_Info" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_right = 476.0
+margin_bottom = 83.0
+text = "Nothing to see here.
+You can go back though, also by swiping right!"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 91.0
+margin_right = 476.0
+margin_bottom = 139.0
 custom_constants/margin_right = 80
 custom_constants/margin_left = 80
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btn_Cancel" type="Button" parent="VBoxContainer/MarginContainer"]
+[node name="btn_Cancel" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer"]
 margin_left = 80.0
 margin_right = 396.0
 margin_bottom = 48.0
 text = "Cancel"
 
-[connection signal="pressed" from="VBoxContainer/MarginContainer/btn_Cancel" to="." method="_on_btn_Cancel_pressed"]
+[connection signal="swipe" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_swipe"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer/btn_Cancel" to="." method="_on_btn_Cancel_pressed"]

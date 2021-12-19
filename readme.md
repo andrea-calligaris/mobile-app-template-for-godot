@@ -12,8 +12,9 @@ A template to start creating mobile apps (not games) with [Godot](https://godote
 * Fix to actually disable _immersive mode_.
 * Window size and viewport settings.
 * App state (previous page, page parenting, etc.).
-* Scrolling up and down.
-* Sorting items.
+* Swipe pages left and right.
+* Scroll the screen up and down.
+* Sort items.
 * Gray theme adapted for mobile covering most of the _Controls_.
 * Customized _SpinBox_ with bigger buttons.
 * Customized _Control_ _RichTextButton_ to have buttons with wrappable and multi-colored text.
@@ -30,7 +31,6 @@ Enable the wanted permissions in the export preset. When testing, you'll export 
 
 ## Possible future features
 
-* Swiping.
 * Customized _FileDialog_ (or I'll just wait for the ability to call the OS file manager).
 
 ## Contributing

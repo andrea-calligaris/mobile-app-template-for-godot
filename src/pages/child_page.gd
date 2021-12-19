@@ -27,3 +27,8 @@ func _input(event): # to go back while testing on PC
 
 func _on_btn_Cancel_pressed():
 	AM.go_back(self, _caller)
+
+
+func _on_ScrollContainer_swipe(direction):
+	if direction == "right":
+		AM.go_back(self, _caller)

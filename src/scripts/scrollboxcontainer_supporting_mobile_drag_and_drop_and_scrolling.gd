@@ -4,7 +4,8 @@
 
 extends ScrollContainer
 
-# ScrollBoxContainer supporting mobile drag and drop and scrolling.
+# ScrollBoxContainer supporting mobile drag and drop, scrolling up and down,
+# and swiping.
 
 # Script meant to be attached to a ScrollContainer.
 # Can be used in conjunction with the custom class RichTextButton to allow
@@ -12,12 +13,16 @@ extends ScrollContainer
 # Scrolling only works if any child control has "mouse_filter" set to
 # "Pass" or "Ignore".
 
+signal swipe(direction)
+
 const SCROLL_SPEED = 4
+const SWIPE_SENSITIVITY = 15
 
 var is_dragging := false
 var _scrolling_up := false
 var _scrolling_down := false
 var _last_scroll_vertical := 0
+var _screen_has_been_touched := false
 
 
 func _ready():
@@ -37,6 +42,12 @@ func _process(_delta):
 
 
 func _on_ScrollContainer_gui_input(event):
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			_screen_has_been_touched = true
+		else:
+			_screen_has_been_touched = false
+
 	if event is InputEventScreenDrag:
 		if event.position.y < 100:
 			_scrolling_up = true
@@ -47,3 +58,13 @@ func _on_ScrollContainer_gui_input(event):
 		else:
 			_scrolling_up = false
 			_scrolling_down = false
+
+		if is_dragging == false and\
+				_screen_has_been_touched:
+			var swipe = event.relative
+			if swipe.x < -SWIPE_SENSITIVITY:
+				emit_signal("swipe", "left")
+				_screen_has_been_touched = false # stop endless swiping
+			elif swipe.x > SWIPE_SENSITIVITY:
+				emit_signal("swipe", "right")
+				_screen_has_been_touched = false # stop endless swiping

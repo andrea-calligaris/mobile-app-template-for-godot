@@ -55,3 +55,8 @@ func _on_btn_GotoChildPage_pressed():
 	var scene = ChildPage.instance()
 	AM.pages_container.add_child(scene)
 	scene.initialize(self)
+
+
+func _on_ScrollContainer_swipe(direction):
+	if direction == "left":
+		_on_btn_GotoChildPage_pressed()

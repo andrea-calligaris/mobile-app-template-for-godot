@@ -42,14 +42,25 @@ margin_right = 456.0
 margin_bottom = 48.0
 text = "Go to another page"
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="lbl_Instruction" type="Label" parent="VBoxContainer"]
 margin_top = 107.0
 margin_right = 476.0
-margin_bottom = 147.0
+margin_bottom = 190.0
+text = "Or just swipe left!
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_SortStuff" type="Label" parent="VBoxContainer"]
+margin_top = 198.0
+margin_right = 476.0
+margin_bottom = 238.0
 text = "List of stuff that you can sort:"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
-margin_top = 155.0
+margin_top = 246.0
 margin_right = 476.0
 margin_bottom = 849.0
 size_flags_horizontal = 3
@@ -58,8 +69,9 @@ script = ExtResource( 3 )
 
 [node name="ContainerList" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
 margin_right = 476.0
-margin_bottom = 694.0
+margin_bottom = 603.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/btn_GotoChildPage" to="." method="_on_btn_GotoChildPage_pressed"]
+[connection signal="swipe" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_swipe"]
