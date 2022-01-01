@@ -21,12 +21,12 @@ __meta__ = {
 
 [node name="PagesContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_right = 480.0
-margin_bottom = 717.0
+margin_bottom = 761.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Menu" type="PanelContainer" parent="VBoxContainer"]
-margin_top = 721.0
+margin_top = 769.0
 margin_right = 480.0
 margin_bottom = 853.0
 rect_min_size = Vector2( 0, 40 )
@@ -35,11 +35,11 @@ rect_min_size = Vector2( 0, 40 )
 margin_left = 2.0
 margin_top = 2.0
 margin_right = 478.0
-margin_bottom = 130.0
+margin_bottom = 82.0
 
 [node name="btn_GotoHome" type="Button" parent="VBoxContainer/Menu/HBoxContainer"]
-margin_right = 236.0
-margin_bottom = 128.0
+margin_right = 234.0
+margin_bottom = 80.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_horizontal = 3
 toggle_mode = true
@@ -62,9 +62,9 @@ __meta__ = {
 }
 
 [node name="btn_GotoSettings" type="Button" parent="VBoxContainer/Menu/HBoxContainer"]
-margin_left = 240.0
+margin_left = 242.0
 margin_right = 476.0
-margin_bottom = 128.0
+margin_bottom = 80.0
 size_flags_horizontal = 3
 toggle_mode = true
 

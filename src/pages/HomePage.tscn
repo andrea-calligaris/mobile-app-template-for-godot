@@ -65,6 +65,7 @@ margin_right = 476.0
 margin_bottom = 849.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+follow_focus = true
 script = ExtResource( 3 )
 
 [node name="ContainerList" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
