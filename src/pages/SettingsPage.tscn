@@ -110,15 +110,18 @@ margin_right = 476.0
 margin_bottom = 499.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+follow_focus = true
 
 [node name="rtl_Credits" type="RichTextLabel" parent="VBoxContainer/ContainerCredits/ScrollContainer"]
 margin_right = 476.0
 margin_bottom = 499.0
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/bold_font = ExtResource( 2 )
 bbcode_enabled = true
 fit_content_height = true
+scroll_active = false
 
 [connection signal="pressed" from="VBoxContainer/ContainerSettings/MarginContainer/VBoxContainer/btn_DelicateAction" to="." method="_on_btn_DelicateAction_pressed"]
 [connection signal="pressed" from="VBoxContainer/ContainerSettings/MarginContainer/VBoxContainer/btn_Credits" to="." method="_on_btn_Credits_pressed"]
