@@ -31,7 +31,7 @@ Enable the wanted permissions in the export preset. When testing, you'll export 
 
 ## Possible future features
 
-* Customized _FileDialog_ (or I'll just wait for the ability to call the OS file manager).
+* A customized _FileDialog_, or I'll just wait for the ability to call the OS file manager (see https://github.com/godotengine/godot-proposals/issues/1123.
 
 ## Contributing
 
