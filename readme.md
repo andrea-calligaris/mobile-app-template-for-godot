@@ -29,9 +29,11 @@ This works for _scene files_ too, but it's easier to just browse them inside _Go
 
 Enable the wanted permissions in the export preset. When testing, you'll export to a debug build, therefore no permissions will be asked, and you'll have to go to your OS app settings and manually enable the permissions (those that you selected in the preset will be available to be switched on).
 
-## Possible future features
+## Godot's bugs related to this project
 
-* A customized _FileDialog_, or I'll just wait for the ability to call the OS file manager (see https://github.com/godotengine/godot-proposals/issues/1123.
+* _FileDialog_ is currently non-usable; we could create a custom one, or wait for the ability to call the native file picker (see https://github.com/godotengine/godot-proposals/issues/1123.
+
+* The _ScrollBar_ is currently a bit transparent to work around this: https://github.com/godotengine/godot/issues/56384.
 
 ## Contributing
 
