@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://pages/child_page.gd" type="Script" id=1]
-[ext_resource path="res://fonts/font_default_bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/bold.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/scrollboxcontainer_supporting_mobile_drag_and_drop_and_scrolling.gd" type="Script" id=3]
 
 [node name="ChildPage" type="PanelContainer"]

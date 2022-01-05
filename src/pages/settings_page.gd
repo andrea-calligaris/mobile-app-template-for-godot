@@ -11,9 +11,8 @@ enum PageTypes { SETTINGS, CREDITS }
 const SCENE_PATH_SETTINGS_PAGE = "res://pages/SettingsPage.tscn"
 const CREDITS_BBCODE =\
 """[color=black][b]Font[/b]
-Oswald Variable Font
-([url]https://github.com/googlefonts/OswaldFont[/url])
-Licensed under the [url=http://scripts.sil.org/OFL]SIL Open Font License, Version 1.1[/url].
+Inconsolata, under SIL Open Font License, Version 1.1.
+Proxima Nova Condensed, free for personal and commercial use.
 
 [b]App's icon[/b]
 Made by Andrea Calligaris in 2021

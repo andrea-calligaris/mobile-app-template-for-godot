@@ -42,7 +42,7 @@ window/handheld/orientation.mobile="portrait"
 
 theme/use_hidpi=true
 theme/custom="res://themes/theme.tres"
-theme/custom_font="res://fonts/font_default.tres"
+theme/custom_font="res://fonts/default.tres"
 
 [input_devices]
 

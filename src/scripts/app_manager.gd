@@ -64,6 +64,8 @@ func get_children_recursive(node: Control, nodes: Array):
 func show_confirmation_dialog(caller: Control, title: String, text: String,
 		method_accept: String):
 	var dialog = ConfirmationDialog.new()
+	dialog.theme = preload("res://themes/theme.tres")
+	dialog.get_close_button().queue_free()
 	dialog.dialog_autowrap = true
 	dialog.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	dialog.dialog_text = text

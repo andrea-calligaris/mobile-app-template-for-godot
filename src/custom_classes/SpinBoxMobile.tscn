@@ -18,19 +18,18 @@ rect_min_size = Vector2( 80, 80 )
 text = " - "
 
 [node name="le_Value" type="LineEdit" parent="."]
-margin_left = 84.0
-margin_right = 180.0
+margin_left = 88.0
+margin_right = 304.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 0, 80 )
 theme = ExtResource( 1 )
-text = "---"
 align = 2
-max_length = 3
+max_length = 2
 selecting_enabled = false
 
 [node name="btn_Increase" type="Button" parent="."]
-margin_left = 184.0
-margin_right = 264.0
+margin_left = 312.0
+margin_right = 392.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 text = " + "

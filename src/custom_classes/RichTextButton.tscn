@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://custom_classes/richtextbutton.gd" type="Script" id=1]
-[ext_resource path="res://fonts/font_default_bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/bold.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.588235, 0.588235, 0.588235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.752941, 0.737255, 0.737255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.752941, 0.737255, 0.737255, 1 )
 
 [node name="RichTextButton" type="MarginContainer"]
 margin_right = 186.0
@@ -19,6 +34,11 @@ margin_bottom = 68.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
