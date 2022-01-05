@@ -9,7 +9,7 @@ extends MarginContainer
 
 # This allows to have multi-colored wrappable text; it also supports internal
 # margins and it has drag and drops functionalities to allow the user to sort
-# items.
+# e.g. crags and routes.
 
 signal pressed
 
@@ -20,6 +20,7 @@ const A_BIT_OF_LEFT_INTERNAL_MARGIN = 20
 
 export(bool) var toggle_mode := false
 export(Font) var font: Font = null
+export(StyleBox) var style_box: StyleBox = null
 var _main_page = null
 var _scroll_container = null
 var _item = null
@@ -35,8 +36,11 @@ onready var timer_to_start_dragging = find_node("TimerToStartDragging")
 func _ready():
 	if toggle_mode:
 		button.toggle_mode = true
-	if Font != null:
-		label.set("custom_fonts/normal_font",font)
+	if font != null:
+		label.set("custom_fonts/normal_font", font)
+	if style_box != null:
+		button.add_stylebox_override("normal", style_box)
+		set_internal_margins(20,10,20,10) # give some space from the border
 	_on_RichTextLabel_resized()
 
 
@@ -50,6 +54,10 @@ func _on_Button_pressed():
 
 func set_bbcode_text(text: String):
 	label.bbcode_text = text
+
+
+func set_font(arg_font):
+	label.set("custom_fonts/normal_font", arg_font)
 
 
 func set_internal_margins(t: float, l: float, b: float, r: float):
